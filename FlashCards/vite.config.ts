@@ -8,6 +8,20 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    configureServer: (server) => {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url;
+
+        // Allow access to specific files or directories
+        if (url === '/' || url === '/static-home.html' || url.startsWith('/assets/')) {
+          return next();
+        }
+
+        // Restrict access to other files
+        res.statusCode = 403;
+        res.end('Access Forbidden');
+      });
+    },
   },
   plugins: [
     react(),
@@ -19,4 +33,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  publicDir: path.resolve(__dirname, "public"), // Specify the public directory
 }));
