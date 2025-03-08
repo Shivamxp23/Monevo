@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit:400,500,700,600|DM+Sans:500,700|Inter:400,700,600");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Outfit", Helvetica;
+}
+
+:root {
+	--mobile-nav-width: 250px;
+	--desc-text: #24365e;
+}
+
+p {
+	font-family: "DM Sans", Helvetica;
+}
+
+a{
+	text-decoration: none;
+	color: unset;
+}
+
+/* header styles */
+header {
+	padding-top: .5em;
+	font-family: "Outfit", Helvetica;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.header {
+	width: 95%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-outbox input,
+.nav-outbox label {
+	display: none;
+}
+
+nav>ul {
+	display: flex;
+	gap: 48px;
+	list-style: none;
+}
+
+nav>ul>li {
+	padding: 16px;
+}
+
+.Outlined {
+	cursor: pointer;
+	color: var(--accent-color);
+	border: 2px solid #67C9CB;
+	border-radius: 5em;
+}
+#register>button{
+	all:unset;
+}
+
+
+
+/* main box */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+}
+
+/* hero section */
+#hero {
+	width: 70%;
+	height: calc(100vh - 15vh);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 15px;
+}
+
+#hero img {
+	width: 60%;
+}
+
+#hero>h1 {
+	font-size: 56px;
+	width: 90%;
+	text-align: center;
+	font-weight: 900;
+}
+
+#hero>p {
+	width: 80%;
+	text-align: center;
+}
+
+#hero span {
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: #d2eff0;
+	color: var(--marker);
+}
+
+#hero button {
+	cursor: pointer;
+	color: white;
+	padding: 16px 32px;
+	margin: 24px 0;
+	border-radius: 4em;
+	background-color: var(--accent-color);
+	border: none;
+}
+
+/* Overview Section */
+#overview {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 60px;
+}
+
+/* Reversing cards for side changing details */
+#overview>:nth-child(2n) {
+	flex-direction: row-reverse;
+}
+
+/* card measures */
+.overview-card {
+	height: 500px;
+	width: 80%;
+	padding: 0 72px;
+	border-radius: 70px;
+	/* cards child arrangement */
+	display: flex;
+	gap: 72px;
+}
+
+/* card specific style */
+.management {
+	background-color: #EDFCFC;
+	--title-text: B6D3D3;
+	--visit-text: var(--accent-color);
+
+}
+
+.assistance {
+	background-color: #EDEEFC;
+	--title-text: #A6A5E1;
+	--visit-text: #A5A5E1;
+
+}
+
+.together {
+	background-color: #FEFAF8;
+	--title-text: #D7B7B7;
+	--visit-text: #DF4D55;
+
+}
+
+.money {
+	background-color: #FDFAF1;
+	--title-text: #D0C8B1;
+	--visit-text: #F7CE47;
+
+}
+
+/* Card texts */
+.card-title {
+	font-size: 12px;
+	color: var(--title-text);
+}
+
+.card-heading {
+	font-size: 40px;
+}
+
+.card-description {
+	font-size: 16px;
+	color: var(--desc-text);
+}
+
+.visit-text {
+	font-size: 16px;
+	color: var(--visit-text);
+}
+
+/* list under 3rd card */
+.detail-pane ul {
+	padding-left: 1em;
+	list-style: none;
+}
+
+.detail-pane li {
+	display: flex;
+	gap: 5px;
+	color: #24365E;
+	font-family: "DM Sans";
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.detail-pane li div {
+	display: flex;
+	height: 18px;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.detail-pane li::marker {
+	padding: unset;
+}
+
+/* card child elements style*/
+.detail-pane {
+	padding: 72px 0;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.screenshot {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.screenshot img {
+	min-width: 100%;
+}
+
+.visit {
+	display: flex;
+}
+
+/* aligning image of 2nd card */
+.iphone {
+	align-items: flex-end;
+}
+
+.iphone img {
+	transform: translateY(50px);
+}
+
+.stats img {
+	width: 100%;
+}
+
+/* Why cards design */
+#why-monevo {
+	padding: 72px;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	height: 500px;
+	gap: 35px;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.why {
+	color: #ACCCCC;
+	font-family: Outfit;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 16px;
+	/* 123.077% */
+	letter-spacing: 0.91px;
+	text-transform: uppercase;
+}
+
+.head-note {
+	text-align: center;
+	color: var(--I-Black, #000);
+	font-family: Outfit;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 48px;
+	/* 120% */
+	letter-spacing: -0.8px;
+}
+
+
+/* Why cards */
+.why-cards {
+	display: flex;
+	gap: 60px;
+}
+
+.cards {
+	display: flex;
+	width: var(--width);
+	flex-direction: column;
+	gap: 12px;
+	align-items: center;
+}
+.cards>h2,.cards>p{
+	text-align: center;
+}
+
+.c-1 {
+	--width: 30%;
+}
+
+.c-2 {
+	--width: 25%;
+}
+
+.c-3 {
+	--width: 25%;
+}
+
+.c-4 {
+	--width: 20%;
+}
+
+/* Take charge */
+.take-charge {
+	display: flex;
+	background-color: #F0F7FF;
+	height: 500px;
+	width: 80%;
+	border-radius: 24px;
+	overflow: hidden;
+}
+
+.note-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 27px;
+	--visit-text: var(--accent-color);
+	padding: 0 0 0 72px;
+}
+.note-box,.screen{
+	width: 50%;
+}
+
+.note {
+	color: var(--I-Black, #000);
+	font-family: Outfit;
+	font-size: clamp(1em, 47px, 5em);
+	font-style: normal;
+	font-weight: 600;
+	line-height: 48px;
+	letter-spacing: -0.96px;
+}
+
+.desc {
+	opacity: 0.3;
+	color: var(--I-Dark-Blue, #24365E);
+	font-family: "DM Sans";
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.screen>img {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* footer */
+footer {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+	padding-bottom: 15px;
+}
+
+.foot {
+	display: flex;
+	font-size: x-large;
+	gap: 70px;
+}
+.foot>.underlined{
+	text-decoration: underline;
+}
+.home {
+	color: #67C9CB;
+	font-family: Outfit;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+/* smaller device */
+@media (max-width: 1015px) {
+	#overview {
+		gap: 25px;
+	}
+
+	.overview-card,
+	#overview>:nth-child(2n) {
+		padding: 10px 0;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+		gap: 25px;
+		border-radius: 24px;
+	}
+
+	.detail-pane {
+		width: 90%;
+		padding-top: 0;
+		padding-bottom: 0px;
+	}
+
+	.detail-pane ul {
+		padding: 2em;
+		list-style-image: url(../assets/overview/icon/Check.png);
+	}
+
+	.detail-pane ul li::marker {
+		height: 100px;
+		width: 100px;
+	}
+
+	.screenshot {
+		position: relative;
+		width: 90%;
+		/* display: block; */
+		justify-content: center;
+		align-items: center;
+	}
+
+	.iphone>img {
+		transform: none;
+		content: url(../assets/Phone.svg);
+	}
+
+	/* 
+	.iphone::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 13;
+		box-shadow: inset #edeefc 0px -45px 20px 20px;
+	} */
+
+	.screenshot img {
+		z-index: 12;
+		width: 100%;
+		min-width: 100%;
+	}
+}
+
+@media (max-width:950px) {
+	.screen{
+		display: none;
+	}
+	.note-box{
+		width: auto;
+		padding: 0 72px;
+	}
+}
+
+@media (max-width:850px) {
+	#why-monevo {
+		height: auto;
+	}
+
+	.why-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cards {
+		align-items: center;
+		width: 60%;
+	}
+}
+@media (max-width:700px) {
+	footer{
+		height: auto;
+	}
+	.foot{
+		display: grid;
+		grid-template-areas: "home"
+		"contact"
+		"register";
+		justify-items: center;
+		gap: 36px;
+	}
+	.home{
+		grid-area: home;
+	}
+	.foot p:first-child{
+		grid-area: contact;
+	}
+	.foot p:nth-child(3){
+		grid-area: register;
+	}
+}
+
+@media (max-width: 655px) {
+
+	/* header improvement*/
+	header {
+		padding: 1em 0;
+	}
+
+	/* navigation panel for smaller devices */
+	.nav-outbox label {
+		display: inline;
+	}
+
+	nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 100vh;
+		overflow: hidden;
+		background-color: white;
+		transition: all .5s ease-in-out;
+	}
+
+	li {
+		width: calc(var(--mobile-nav-width) - 2em);
+		overflow: hidden;
+	}
+
+	#overlay {
+		transition: all .5s;
+	}
+
+	/* Ham burger button functions */
+	body:has(#open-nav:checked) {
+		overflow: hidden;
+	}
+
+	#open-nav:checked~nav {
+		overflow: auto;
+		height: 100vh;
+		width: var(--mobile-nav-width);
+		box-shadow: 0 0 50px 10px azure;
+	}
+
+	#open-nav:checked~#overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba(240, 255, 255, 0.329);
+	}
+
+	/* navigation panel layout */
+	nav>ul {
+		flex-direction: column;
+		gap: unset;
+	}
+
+	nav>ul>li {
+		padding: 1em 0 1em 2em;
+	}
+
+	/* registration button tweak for smaller devices*/
+	.Outlined {
+		border: unset;
+	}
+
+	/* hero section improvement */
+	#hero h1 {
+		font-size: 44px;
+	}
+
+	#hero img {
+		width: 80%;
+	}
+
+	#hero {
+		width: 100%;
+		height: calc(100svh - 80px);
+	}
+}
+
+@media (max-width:550px) {
+	.cards{
+		width: 172%;
+	}	
+	.note-box{
+		padding: 0 40px;
+	}
+}
